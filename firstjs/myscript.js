@@ -1,0 +1,1 @@
+alert("this is different js file of javascript");
