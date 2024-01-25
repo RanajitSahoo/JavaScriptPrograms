@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        let n=new String('String');
+        let o=new String("String");
+        let p="String";
+        let q="String";
+        console.log(n,typeof n);
+        console.log(o,typeof o);
+        console.log(p,typeof p);
+        console.log(n==o);//false because both are refernce
+        console.log(n==p);// true == checks values of n and p
+        console.log(p==q);//true ==checks values
+        console.log(n===p);//false === checks value s well as datatype
+        console.log(o==p);//true
+        console.log(o===p);//false
+        console.log(p===q);//true
+        let r=`fan`;
+        console.log(r,typeof r);
+        let s=`my name
+        is 
+        Raja`;
+        console.log(s);
+
+
+        //Interpolation
+        //output like sum of 12 and 13 is 25
+        let a=12;
+        let b=13;
+        let c=a+b;
+        console.log("sum of "+a+" and "+b+" is "+c);
+        console.log(`sum of ${a} and ${b} is ${c}`);
+    </script>
+</body>
+</html>
