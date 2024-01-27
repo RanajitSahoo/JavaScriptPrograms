@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //important function of String in js
+        let s="i love javascript";
+        console.log(s);
+        //length of string
+        let len=s.length;
+        console.log(len);
+
+        //String concatenation by concat()
+        let s1=" and java"
+        console.log(s.concat(s1));
+        let s2=s.concat(s1+" me");
+        console.log(s+s1+s2);
+
+        // charAt(index)
+        let s3=s.charAt(2);
+        console.log(s3);
+        
+        
+        //indexOf()
+        let s4=s.indexOf("love");
+        console.log(s4);
+        let s5=s.indexOf("a");
+        console.log(s5);
+        let s6=s.lastIndexOf("a");
+        console.log(s6);
+        s6=s.toUpperCase();
+        console.log(s6);
+        s6=s.toLowerCase();
+        console.log(s6,typeof s6);
+       s6= s6.toUpperCase();
+       console.log(s6);
+       //subString(Start,ending(excluded))
+       s6=s.substring(2,6);
+       console.log(s6);
+       //startswith
+       s6=s.startsWith('i');
+       console.log(s6);
+       s6=s.startsWith('I');
+       console.log(s6);
+       s6=s.startsWith('i lo');
+       console.log(s6);
+
+       //endsWith
+       s6=s.endsWith("t");
+       console.log(s6);
+       s6=s.endsWith("st");
+       console.log(s6);
+       s6=s.endsWith("pt");
+       console.log(s6);
+
+       //split
+      s6= s.split(" ");
+      console.log(s6);
+      console.log(s6,typeof s6);
+      console.log(s6[0]);
+      s6.forEach(element => {
+        console.log(element);
+      });
+      //trim
+     s6= s.trim();
+     console.log(s6);
+
+     //
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Important String Operattion</h1>
+
+    <script>
+        //1.check equality of String
+        let st="javaScript";
+        let st2="javaScript";
+        console.log(st==st2)
+        console.log(st===st2);
+        //create String using new
+        let s1=new String("javaScript");
+        let s2=new String("javaScript");
+        console.log(s1==s2);
+        console.log(s1===s2);
+
+        console.log(s1==st);
+        console.log(s1===st);
+
+        //2.comparing two string
+        let s3="A";
+        let s4="C";
+        let result=s3.localeCompare(s4);
+        //exact matching :0
+        //s1<s2:-1
+        //s1>s2:1
+        console.log(result)
+        console.log(s3.charCodeAt(0));
+
+        //replacing in strings
+        let old="I hate javascript";
+        let n=old.replace("hate","love");
+        console.log(old);
+        console.log(n);
+
+        //acessing character
+        let s5="I love javascript";
+        console.log(s5.charAt(0));
+        console.log(s5[2]);
+
+        let s6=s5.split(" ");
+        console.log(s6);
+        s6=s5.split("");
+        console.log(s6);
+        s6=s5.split("v");
+        console.log(s6);
+    </script>
+</body>
+</html>

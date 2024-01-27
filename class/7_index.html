@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Type Conversion</h1>
+    <script>
+        //String conversion
+        let a=12;
+        let b=a.toString();
+        let c=String(a);
+        console.log(a,typeof a);
+        console.log(b,typeof b);
+        console.log(c,typeof c);
+
+        //Numeric Converion
+
+        let d="12";
+        let e=Number(d);
+        let f=parseInt(d);
+        console.log(d,typeof d);
+        console.log(e,typeof e);
+        console.log(f,typeof f);
+        let g="3.45";
+        let h=Number(g);
+        let i=parseFloat(g);
+        console.log(g,typeof g);
+        console.log(h,typeof h);
+        console.log(i,typeof i);
+        console.log(Number(undefined));
+        console.log(Number(null));
+        console.log(Number(true));
+        console.log(Number(false));
+        console.log(Number("sdkl"));
+
+        //Boolean conversion
+        let j="false";
+        let k=Boolean(j);
+        console.log(j,typeof j);
+        console.log(k,typeof k);
+        let l="true";
+        let m=Boolean(l);
+        console.log(l,typeof l);
+        console.log(m,typeof m);
+        let n="";
+        let o=Boolean(n);
+        console.log(n,typeof n);
+        console.log(o,typeof o);
+        let p=0;
+        let q=Boolean(p);
+        console.log(p,typeof p);
+        console.log(q,typeof q);
+        let r=11;
+        let s=Boolean(r);
+        console.log(r,typeof r);
+        console.log(s,typeof s);
+        let t="raja";
+        let u=Boolean(t);
+        console.log(t,typeof t);
+        console.log(u,typeof u);
+        let v=-22;
+        let w=Boolean(v);
+        console.log(v,typeof v);
+        console.log(w,typeof w);
+        let x=null;//NaN and undefined also false value
+        let y=Boolean(x);
+        console.log(x,typeof x);
+        console.log(y,typeof y);
+
+    </script>
+</body>
+</html>
