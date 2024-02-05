@@ -9,7 +9,76 @@
 <body>
     <h1>Arrays in JavaScript</h1>
     <script>
+        //how to create array
+        let a=[1,2,3,4,5,6];
+        console.log(a,typeof a);
         
+
+        //how to access element
+        console.log(a[2]);
+
+        //using constructor
+        let n=new Array("Ravi");
+        n.push("Raja");
+        console.log(n);
+
+        //hpw to find size of arrray
+        console.log(n.length);
+
+        //type is not fixed
+        const mydeatils=["ranajit",7751000644,89.23,["a","AB",22,33.345]];
+        console.log(mydeatils);
+        console.log(mydeatils[3]);
+
+        //array functions
+
+        let names=["raja","sahoo","ranajit"];
+        console.log(names);
+        console.log(names.length);
+        //array aaccess using index
+        console.log(names[0]);
+        console.log(names[1]);
+
+        //loop over an array
+        //forEach
+        names.forEach(function (item,index) {
+            console.log(item+" -"+index);
+        });
+        let nums=[1,2,3,45,5];
+        let sum=0;
+        nums.forEach(function (item) {
+            sum+=item;
+        })
+        console.log(sum);
+
+        //ading elements at last
+        console.log(names.push("tanmay"));
+        console.log(names)
+        //remove elements from last
+        console.log(names.pop());
+        console.log(names)
+
+        //remove element from begining
+        console.log(names.shift());
+        console.log(names)
+
+        //add element at begining
+        console.log(names.unshift("rama"));
+        console.log(names)
+
+        //
+        console.log(names.indexOf("sahoo"))
+        names.push("xxx");
+        //remove the element from any position
+        //splice(pos,length);
+        console.log(names);
+        console.log(names.splice(2,0));
+        console.log(names);
+        //copy array
+        //slice
+        let x=names.slice(0,2)
+        console.log(x);
+        console.log(names);
     </script>
 </body>
 </html>

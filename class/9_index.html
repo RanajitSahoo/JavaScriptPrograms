@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <script>
+        
+        //function
+        add(10);
+        function add(a)
+        {
+            let b="is";
+            console.log(a+b)
+            
+        }
+        function add(a)
+        {
+            let b;
+            console.log(a+b)
+            
+        }
+        
+        function doSum(a,b){
+            return a+b;
+        }
+        console.log(doSum(10,20));
+        
+
+        //arrow function
+        const c=(f)=>{
+            let r=(5/9)*(f-32);
+            return r;
+        };
+        console.log(c(100))
+
+        
+        //Sum of Digits of a number
+        let sumOfDigit=(num)=>{
+            let sum=0;
+            while(num!=0){ 
+              sum+=Math.floor(num%10);
+              num=Math.floor(num/10);
+            }
+            return sum;
+        };
+        console.log(sumOfDigit(123));
+        
+    </script>
+</body>
+</html>
