@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops in JavaScript</h1>
+    <script>
+
+        //for loop
+        for(let i=1;i<=10;++i){
+           if(i==3)break;
+           console.log(`hey ${i}`);
+        }
+        //while loop is Entry control loop
+        let i=1;
+        let b=true;
+        while(b){
+            console.log(i++);
+            if(i==11)b=false;
+        }
+        //do while loop is exit control loop
+        let j=1;
+        do {
+            console.log(j++);
+        } while (j<=0);
+        //  for..in (it is work for object or array)
+        let student={
+            id:1,
+            name:"Ranajit",
+            age:27
+        }
+        console.log(student,typeof student);
+        for(let s in student){
+            console.log(`${s}=> ${student[s]}`);
+            console.log(student[s]);
+        }
+
+        let arr=['abc','def','fgh',123];
+        for(let i in arr){
+            console.log(arr[i]);
+        }
+        //for..of(it is work only for array and strings not object)
+        let ar=["abc",'def','efg'];
+        for(let i of ar){
+            console.log(i);
+        }
+        
+
+    </script>
+</body>
+</html>

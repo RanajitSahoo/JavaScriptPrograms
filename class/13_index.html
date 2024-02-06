@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+</head>
+<body>
+    <h1>Dom Selectors</h1>
+    <h2 id="name">Ranajit Sahoo</h2>
+    <h1>hello world</h1>
+    <h1 class="myClass">hello world</h1>
+    <h1 class="myClass">hello world</h1>
+    <h1 class="myClass">hello world</h1>
+    <script>
+       let html= document.documentElement;
+       console.log(html);
+       let body=document.body;
+       console.log(body);
+       let head=document.head;
+       console.log(head);
+       let title=document.title;
+       console.log(title);
+       //id Selector
+
+       let name=document.getElementById("name");
+       console.log(name.innerHTML);
+       name.innerHTML="RajaSahoo";
+       name.style.color="blue";
+       name.style.backgroundColor="yellow";
+       
+       //class Selector
+       let cname=document.getElementsByClassName("myClass");
+       console.log(typeof cname);
+       for(let el of cname){
+        console.log(el);
+        el.style.color="white";
+        el.style.backgroundColor="red";
+       }
+       for(let i=0;i<cname.length;i++){
+        cname[i].innerHTML="Ranajit Sahoo";
+       }
+       //tag selector
+       let h=document.getElementsByTagName("h1");
+       for(let h1 of h){
+        h1.innerHTML="xxxxxx";
+       }
+       // css Selector
+       let qn=document.querySelector(".myClass");
+       qn.innerHTML="RanajitSahoo";
+       console.log(qn);
+       let ql=document.querySelectorAll(".myClass");
+       for(let q of ql){
+        q.innerHTML="RanajitSahoo";
+        q.style.backgroundColor="lightblue";
+       }
+    </script>
+</body>
+</html>

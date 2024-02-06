@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Object</h1>
+    <script>
+       let ob={
+        name:'Ranajit',
+        age:30,
+        phone:7751000644,
+        address:'SAO',
+        lastName:"Sahoo",
+        last_Name:"Sahoo",
+        "Last Name":"Sahoo",
+        display:function(){
+            // console.log(this.name,this.address);
+            return this.name;
+        }
+       } 
+       console.log(ob.name);
+       console.log(ob["name"]);
+       console.log(ob.age);
+       console.log(ob.phone);
+       console.log(ob.address);
+       console.log(ob.lastName);
+       console.log(ob.last_Name);
+       console.log(ob['Last Name']);
+       console.log(ob.display());
+       console.log(typeof ob);
+       for(let i in ob){
+        console.log(i+"==>"+ob[i]);
+       }
+       console.log(ob['display']());
+       //changing values of properties
+       ob.name="Raja";
+       ob.last_Name="singh";
+       ob["Last Name"]="tiwari";
+       //dyanmic adding property
+       ob['email']="raja@123@gmail.com";
+       //deleting property
+       delete ob.last_Name;
+       delete ob["Last Name"];
+       ob.ecom=1234
+       console.log(ob)
+    </script>
+</body>
+</html>

@@ -9,7 +9,39 @@
 <body>
     <h1>Truthy Or Falsy </h1>
     <script>
+        //
+        let a=43;
+        let b=23;
+        if(a>b) console.log("a is big");
+        else console.log("b is big")
+        console.log("--truthy value---")
+        if(1)console.log("true");
+        else console.log("false");
+        if(+12)console.log("true");
+        else console.log("false");
+        if(-1)console.log("true");
+        else console.log("false");
+        if(true)console.log("true");
+        else console.log("false");
+        if("abc")console.log("true");
+        else console.log("false");
+        console.log("--falsy value---");
+        if("")console.log("true");
+        else console.log("false");
+        if(0)console.log("true");
+        else console.log("false");
+        if(-0)console.log("true");
+        else console.log("false");
+        if(null)console.log("true");
+        else console.log("false");
+        if(NaN)console.log("true");
+        else console.log("false");
+        if(undefined)console.log("true");
+        else console.log("false");
         
+        if(0||1)console.log("true");
+        else console.log("falsy");
+
     </script>
 </body>
 </html>
