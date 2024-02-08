@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM get AND set Attributes</title>
+</head>
+<body>
+    <a id="url" class="al al-d" href="https://www.google.com">Google</a>
+    <button onclick="getAt()">Get</button>
+    <button onclick="setAt()">Set</button>
+    <button onclick="remAt()">remove</button>
+    <script>
+        let a=document.querySelector("a");
+        
+        const getAt=()=>{
+            let h=a.getAttribute("href");
+            console.log(h);
+            console.log(a.getAttribute("id"));
+            console.log(a.getAttribute("class"));
+        };
+        const setAt=()=>{
+            a.setAttribute("href","https://www.youtube.com")
+            a.innerHTML="youtube";
+        };
+        const remAt=()=>{
+            a.removeAttribute("id");
+        }
+    </script>
+</body>
+</html>

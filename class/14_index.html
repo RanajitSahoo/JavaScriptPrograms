@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styling</title>
+    <style>
+        .red{
+            background-color: red;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="cs()">changeStyle</button>
+    <button onclick="getStyle()">get Information</button>
+    <h1 id="main">RanajitSahoo</h1>
+    <h1 id="sub">Jspider Practice</h1>
+    <h1 id="submain">welcome to styling</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, et inventore. Minima consequuntur repudiandae voluptatem voluptate obcaecati labore at, possimus iure consequatur aliquam blanditiis ea cum! Magni, inventore iste! Incidunt sapiente, eos laboriosam itaque consectetur obcaecati dignissimos delectus animi ducimus, reprehenderit praesentium quaerat. Perspiciatis impedit, reprehenderit dolorum quidem quo blanditiis aspernatur ex placeat saepe vel sequi dolores totam. Porro minus aspernatur aliquam deleniti nemo. Rerum, pariatur architecto quos aperiam sequi ad natus a necessitatibus molestiae, quasi officia inventore iusto nemo aspernatur assumenda expedita ex voluptas ipsa accusantium? Eum ab cum dicta quas voluptatem similique unde! At reprehenderit ab sed aliquam a consectetur blanditiis natus, laboriosam architecto iusto itaque maxime temporibus ipsa et totam minus commodi praesentium, magni necessitatibus incidunt quas earum enim harum ipsam. Itaque sequi sint nulla tempore velit dolores odio! Maxime sit vitae placeat a delectus omnis illo! Quod at explicabo error, dolore optio molestiae laudantium pariatur cumque sapiente, magnam modi harum reprehenderit sint quisquam. Nobis alias assumenda cumque unde atque ipsum hic quod vero, cum cupiditate autem inventore aliquid recusandae odio nemo repellat voluptates nam id modi delectus suscipit? Soluta ea id modi dicta ab tempora. Autem quasi, temporibus animi, soluta cumque natus in, ex nemo voluptatibus ipsum obcaecati aut? Architecto ea voluptatem, quod, perspiciatis delectus vel omnis harum, accusamus voluptatibus reiciendis consectetur magni aperiam. Nesciunt in sapiente dignissimos enim blanditiis ipsum tempore sint qui repudiandae cumque! Aperiam ea, reprehenderit est expedita delectus fuga! Voluptas quisquam, nisi praesentium quae adipisci eveniet velit perspiciatis fugit. Saepe libero nam, non sapiente aliquam corrupti ea modi tenetur dolorem neque? Ipsa optio quaerat, ullam nulla tenetur fuga officia excepturi rerum aliquam in ab voluptas maiores mollitia totam molestias. Sint est accusantium a! Molestiae sequi, quam incidunt corrupti rem enim tempora tempore unde quasi, vel provident exercitationem magnam quod hic eius non voluptatum. Quod eius quasi ad dolore. Animi, suscipit eaque sequi soluta nihil molestias voluptatem harum asperiores cum ducimus obcaecati consequuntur exercitationem veritatis. Veritatis hic aliquid eveniet laudantium quasi nemo laborum inventore ea mollitia debitis necessitatibus ducimus cumque libero deserunt culpa alias tenetur aperiam odit, ad perspiciatis. Animi maiores delectus molestias sit. Suscipit quaerat illo eos? Voluptas ab vitae sed quis laborum provident minima tempora quasi? Voluptate perferendis atque iure in explicabo quo quod similique qui odio reprehenderit, nesciunt sunt magni tenetur, commodi neque consectetur. Saepe delectus, inventore porro sit ipsam est! Adipisci pariatur amet tenetur aperiam ea consequatur, officiis sapiente perspiciatis obcaecati mollitia doloribus. Accusamus dicta dolore consectetur libero corporis animi ab officia non ipsa repudiandae ratione laboriosam blanditiis numquam perferendis placeat suscipit sunt pariatur modi earum, amet ipsam. Ratione laboriosam a dolores ipsa voluptatibus nobis, alias ipsam exercitationem aspernatur suscipit fuga accusamus itaque libero. Provident non temporibus ea explicabo molestias accusamus ducimus pariatur porro eaque, neque culpa aut reiciendis doloremque repellat totam, sint cum, illum aliquam praesentium iusto voluptatum recusandae! Dolore laboriosam ducimus accusantium consequuntur magni assumenda atque harum rem laborum repellendus, et, fugit est, dicta cum perspiciatis totam aliquam saepe nemo perferendis commodi dignissimos distinctio nostrum! Laborum, quae?</p>
+
+    <script>
+        //select elements to add css style
+        let mainob=document.getElementById("main");
+        let sub=document.getElementById("sub");
+        let submain=document.getElementById("submain");
+
+       
+        //applying styling on element
+        const cs=()=>{
+            mainob.style.color="blue";
+        mainob.style.fontSize="40Px";
+        mainob.style.border="1px solid green";
+        mainob.style.padding="20px";
+        // mainob.style.backgroundColor="teal";
+        mainob.style.fontWeight="bold";
+        document.body.style.backgroundColor="black";
+        document.body.style.color="white";
+        mainob.className="red";
+        }
+
+        const getStyle=()=>{
+            // console.log(mainob.style.color);
+            // console.log(mainob.style.fontSize);
+            // console.log(mainob.style.border);
+            let styles=window.getComputedStyle(mainob);
+            console.log(styles.color);
+            console.log(styles.fontSize);
+            console.log(styles.border);
+        }
+    </script>
+</body>
+</html>

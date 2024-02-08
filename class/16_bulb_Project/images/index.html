@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on off project</title>
+    <style>
+        
+        img{
+            width: 300px;
+            height: 300px;
+            aspect-ratio: 1/2;
+            background-color: #dff0d8;
+            mix-blend-mode: difference;
+            min-block-size:20px ;
+            
+        }
+        .bulb-container{
+            
+            margin: 50px;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here is my bulb cont😄rols</h1>
+    <button onclick="on()">turn on</button>
+    <button onclick="off()">turn off</button>
+    <button id="t" onclick="toggle()">on</button>
+    <div class="bulb-container">
+        <img src="../images/offf.jpeg" alt="off bulb">
+    </div>
+    <script>
+        let bulb=document.querySelector("img");
+        const on=()=>{
+            bulb.setAttribute("src","../images/onn.jpeg");
+        }
+        const off=()=>{
+            bulb.setAttribute("src","../images/offf.jpeg");
+        }
+        const toggle=()=>{
+            let t=document.getElementById("t");
+            let src=bulb.getAttribute("src");
+            if(src==="../images/offf.jpeg"){
+                on();
+                t.innerHTML="on";
+            }else{
+                off();
+                t.innerHTML="off";
+            }
+        }
+    </script>
+</body>
+</html>
