@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .main{
+            
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .clock{
+            font-size: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: bisque;
+            color: rgb(159, 248, 5);
+        }
+        .d{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: bisque;
+            border: 1px dotted rgb(159, 248, 5); 
+            box-shadow: 10px 10px  30px rgb(159, 248, 5) ;
+        }
+        .c{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: bisque;
+            box-shadow:  10px 10px 30px rgb(159, 248, 5) ;
+            border: 1px solid rgb(159, 248, 5);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <span class="c">qq</span> 
+    <div class="main">
+        
+        <h1 class="clock">3 : 30 : 31</h1>
+    </div>
+    <span class="d">ll</span>
+    <script>
+        
+        const time=()=>{
+            let d=new Date();
+            let h=d.getHours();
+            let m=d.getMinutes();
+            let s=d.getSeconds();
+            return `${h} : ${m} : ${s}`;
+        };
+        setInterval(() => {
+          let cl=document.querySelector(".clock"); 
+          let c=document.querySelector(".c"); 
+          let d=document.querySelector(".d"); 
+          cl.innerHTML=time();
+          c.innerHTML=day();
+          d.innerHTML=mon();
+        }, 1000);
+        const day=()=>{
+            let d=new Date();
+            let st=d.toDateString();
+            st=st.split(" ");
+            
+            return st[0];
+        }
+        const mon=()=>{
+            let d=new Date();
+            let st=d.toDateString();
+            st=st.split(" ");
+            
+            return st[1];
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation</title>
+</head>
+<body>
+    <h1>DOM Navigation</h1>
+    <div id="container">
+        <h1 id="title">we are here</h1>
+        <p id="content">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quo quod corrupti, ab eaque quaerat nostrum? Ipsum labore consequuntur nisi, molestias neque eos repellendus eaque quia, totam esse quaerat nostrum!
+            Odit nisi, corrupti et vel unde quas eum sapiente rerum sunt maiores architecto nam consectetur placeat hic at illum enim distinctio autem facilis alias laborum necessitatibus, fugiat impedit. Voluptatibus, suscipit?</span>
+        </p>
+        <h2>subscribe</h2>
+        
+    </div>
+    <button ondblclick="bclick()">doubleClick</button>
+    <script>
+       function bclick() {
+        let container=document.getElementById("container");
+        //to get the first child of the container object
+        let firstChild=container.firstElementChild;
+        console.log(firstChild);
+        firstChild.innerHTML="hi it going to change";
+        //to get the last child of the container objectt
+        let lastChild=container.lastElementChild;
+        lastChild.style.color="white";
+        lastChild.style.backgroundColor="blue";
+
+        //to get all the node or all children
+        let nodes=container.children;
+        for (const n of nodes) {
+            console.log(n.nodeName);
+           
+        }
+         nodes=container.childNodes;
+        for (const n of nodes) {
+            console.log(n.nodeName);
+           
+        }
+
+        //get the parent node of the container object
+        let parentNode=container.parentNode;
+        console.log(parentNode.nodeName);
+
+        //get the previous siblings and next siblings
+        let title=document.getElementById("title");
+        let nextsib=title.nextElementSibling;
+        console.log(nextsib.nodeName);
+        let sib=nextsib.nextElementSibling;
+        console.log(sib.nodeName);
+        console.log(sib.previousElementSibling.nodeName);
+       }
+    </script>
+</body>
+</html>

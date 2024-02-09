@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript timer</title>
+</head>
+<body>
+    <h1>javascript timer</h1>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <script>
+        //setTimeout()
+        //setInterval()
+
+        //we have to write our code that we want to use execute after 3 sec
+        function mycode() {
+            console.log("hey, there!!");
+            console.log("I am raja");
+            console.log("bye bye!!");
+        }
+        let timer;
+        function start(){
+            // setTimeout(mycode, 3000);
+           timer =setInterval(mycode, 1000);
+           console.log(timer,typeof timer);
+        }
+        function stop() {
+            clearInterval(timer);
+        }
+    </script>
+</body>
+</html>
