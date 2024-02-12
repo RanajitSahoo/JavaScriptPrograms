@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Window Object & Date and time</h1>
+    <script>
+    //    let loc= window.location;
+    //    loc.assign("https://www.youtube.com")
+    //    console.log(loc.port);
+    //    window.document.body.style.backgroundColor="red";
+    //    console.log(window.innerHeight)
+    //    console.log(window.innerWidth);
+    //    console.log(window.outerHeight);
+    //    console.log(window.outerWidth);
+    //    window.open("https://www.youtube.com");
+
+        let d= new Date();
+        console.log(d);
+        console.log(d.toDateString());
+        console.log(d.toISOString());
+        console.log(d.toUTCString());
+        console.log(d.toLocaleDateString());
+        console.log(d.toLocaleTimeString());
+        let str=d.toDateString();
+        let arr=str.split(" ");
+        for(let a of arr){
+            console.log(a);
+        }
+        console.log(`date ${d.getDate()}`);
+        console.log(`month ${d.getMonth()+1}`);
+        console.log(`year ${d.getFullYear()}`);
+        console.log(`day ${d.getDay()}`);
+        console.log(`h ${d.getHours()}`);
+        console.log(`m ${d.getMinutes()}`);
+        console.log(`s ${d.getSeconds()}`);
+        console.log(`ms ${d.getMilliseconds()}`);
+        d=new Date("17 june 1997");
+        console.log(d);
+    </script>
+</body>
+</html>

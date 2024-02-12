@@ -56,10 +56,19 @@
         
         const time=()=>{
             let d=new Date();
-            let h=d.getHours();
+            let h=d.getHours()%12;
+            
+            let amPm=h>=12?"PM":"AM";
+            h=h==0?12:h;
             let m=d.getMinutes();
+            m=m>9?m:'0'+m;
             let s=d.getSeconds();
-            return `${h} : ${m} : ${s}`;
+            s=s>9?s:'0'+s;
+            let ms=d.getMilliseconds();
+            ms=ms>99?ms:'0'+ms;
+
+            return `${h} : ${m} : ${s} : ${ms} ${amPm}`;
+            // return d.toLocaleTimeString();
         };
         setInterval(() => {
           let cl=document.querySelector(".clock"); 
@@ -68,7 +77,7 @@
           cl.innerHTML=time();
           c.innerHTML=day();
           d.innerHTML=mon();
-        }, 1000);
+        }, 100);
         const day=()=>{
             let d=new Date();
             let st=d.toDateString();
